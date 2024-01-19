@@ -1,8 +1,8 @@
 # Ultralytics YOLO 🚀, AGPL-3.0 license
 
-from ultralytics.engine.results import Results
-from ultralytics.models.yolo.detect.predict import DetectionPredictor
-from ultralytics.utils import DEFAULT_CFG, LOGGER, ROOT, ops
+from yolo.ultralytics.engine.results import Results
+from yolo.ultralytics.models.yolo.detect.predict import DetectionPredictor
+from yolo.ultralytics.utils import DEFAULT_CFG, LOGGER, ROOT, ops
 
 
 class PosePredictor(DetectionPredictor):

@@ -21,7 +21,7 @@ import numpy as np
 import torch
 import yaml
 
-from ultralytics import __version__
+from yolo.ultralytics import __version__
 
 # PyTorch Multi-GPU DDP Constants
 RANK = int(os.getenv('RANK', -1))

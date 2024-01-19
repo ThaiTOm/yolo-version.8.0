@@ -17,8 +17,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision
 
-from ultralytics.utils import DEFAULT_CFG_DICT, DEFAULT_CFG_KEYS, LOGGER, RANK, __version__
-from ultralytics.utils.checks import check_version
+from yolo.ultralytics.utils import DEFAULT_CFG_DICT, DEFAULT_CFG_KEYS, LOGGER, RANK, __version__
+from yolo.ultralytics.utils.checks import check_version
 
 try:
     import thop

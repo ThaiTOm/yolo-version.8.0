@@ -1,6 +1,6 @@
 # Ultralytics YOLO 🚀, AGPL-3.0 license
 
-from ultralytics.utils import SETTINGS
+from yolo.ultralytics.utils import SETTINGS
 
 try:
     import ray

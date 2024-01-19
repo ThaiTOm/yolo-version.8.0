@@ -2,10 +2,10 @@
 
 import torch
 
-from ultralytics.engine.predictor import BasePredictor
-from ultralytics.engine.results import Results
-from ultralytics.utils import ops
-from ultralytics.utils.ops import xyxy2xywh
+from yolo.ultralytics.engine.predictor import BasePredictor
+from yolo.ultralytics.engine.results import Results
+from yolo.ultralytics.utils import ops
+from yolo.ultralytics.utils.ops import xyxy2xywh
 
 
 class NASPredictor(BasePredictor):

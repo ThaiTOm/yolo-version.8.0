@@ -3,8 +3,8 @@
 import os
 from pathlib import Path
 
-from ultralytics.utils import LOGGER, RANK, SETTINGS, TESTS_RUNNING, ops
-from ultralytics.utils.torch_utils import model_info_for_loggers
+from yolo.ultralytics.utils import LOGGER, RANK, SETTINGS, TESTS_RUNNING, ops
+from yolo.ultralytics.utils.torch_utils import model_info_for_loggers
 
 try:
     import comet_ml

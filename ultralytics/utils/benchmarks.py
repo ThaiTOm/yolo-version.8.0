@@ -34,14 +34,14 @@ import numpy as np
 import torch.cuda
 from tqdm import tqdm
 
-from ultralytics import YOLO
-from ultralytics.cfg import TASK2DATA, TASK2METRIC
-from ultralytics.engine.exporter import export_formats
-from ultralytics.utils import LINUX, LOGGER, MACOS, ROOT, SETTINGS
-from ultralytics.utils.checks import check_requirements, check_yolo
-from ultralytics.utils.downloads import download
-from ultralytics.utils.files import file_size
-from ultralytics.utils.torch_utils import select_device
+from yolo.ultralytics import YOLO
+from yolo.ultralytics.cfg import TASK2DATA, TASK2METRIC
+from yolo.ultralytics.engine.exporter import export_formats
+from yolo.ultralytics.utils import LINUX, LOGGER, MACOS, ROOT, SETTINGS
+from yolo.ultralytics.utils.checks import check_requirements, check_yolo
+from yolo.ultralytics.utils.downloads import download
+from yolo.ultralytics.utils.files import file_size
+from yolo.ultralytics.utils.torch_utils import select_device
 
 
 def benchmark(model=Path(SETTINGS['weights_dir']) / 'yolov8n.pt',

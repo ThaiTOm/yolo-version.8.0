@@ -1,6 +1,6 @@
 # Ultralytics YOLO 🚀, AGPL-3.0 license
 
-from ultralytics.utils import LOGGER, SETTINGS, TESTS_RUNNING, colorstr
+from yolo.ultralytics.utils import LOGGER, SETTINGS, TESTS_RUNNING, colorstr
 
 try:
     from torch.utils.tensorboard import SummaryWriter

@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from ultralytics import SAM, YOLO
+from yolo.ultralytics import SAM, YOLO
 
 
 def auto_annotate(data, det_model='yolov8x.pt', sam_model='sam_b.pt', device='', output_dir=None):

@@ -4,8 +4,8 @@ import os
 
 import pkg_resources as pkg
 
-from ultralytics.utils import LOGGER, SETTINGS, TESTS_RUNNING
-from ultralytics.utils.torch_utils import model_info_for_loggers
+from yolo.ultralytics.utils import LOGGER, SETTINGS, TESTS_RUNNING
+from yolo.ultralytics.utils.torch_utils import model_info_for_loggers
 
 try:
     from importlib.metadata import version

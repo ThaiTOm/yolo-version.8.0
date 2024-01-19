@@ -2,11 +2,11 @@
 
 import torch
 
-from ultralytics.data import ClassificationDataset, build_dataloader
-from ultralytics.engine.validator import BaseValidator
-from ultralytics.utils import DEFAULT_CFG, LOGGER
-from ultralytics.utils.metrics import ClassifyMetrics, ConfusionMatrix
-from ultralytics.utils.plotting import plot_images
+from yolo.ultralytics.data import ClassificationDataset, build_dataloader
+from yolo.ultralytics.engine.validator import BaseValidator
+from yolo.ultralytics.utils import DEFAULT_CFG, LOGGER
+from yolo.ultralytics.utils.metrics import ClassifyMetrics, ConfusionMatrix
+from yolo.ultralytics.utils.plotting import plot_images
 
 
 class ClassificationValidator(BaseValidator):

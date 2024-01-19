@@ -3,8 +3,8 @@
 SAM model interface
 """
 
-from ultralytics.engine.model import Model
-from ultralytics.utils.torch_utils import model_info
+from yolo.ultralytics.engine.model import Model
+from yolo.ultralytics.utils.torch_utils import model_info
 
 from .build import build_sam
 from .predict import Predictor

@@ -11,7 +11,7 @@ import torch
 import torch.nn.functional as F
 import torchvision
 
-from ultralytics.utils import LOGGER
+from yolo.ultralytics.utils import LOGGER
 
 from .metrics import box_iou
 

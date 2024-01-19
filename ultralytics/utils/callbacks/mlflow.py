@@ -4,7 +4,7 @@ import os
 import re
 from pathlib import Path
 
-from ultralytics.utils import LOGGER, SETTINGS, TESTS_RUNNING, colorstr
+from yolo.ultralytics.utils import LOGGER, SETTINGS, TESTS_RUNNING, colorstr
 
 try:
     import mlflow

@@ -2,10 +2,10 @@
 
 import requests
 
-from ultralytics.data.utils import HUBDatasetStats
-from ultralytics.hub.auth import Auth
-from ultralytics.hub.utils import HUB_API_ROOT, HUB_WEB_ROOT, PREFIX
-from ultralytics.utils import LOGGER, SETTINGS, USER_CONFIG_DIR, yaml_save
+from yolo.ultralytics.data.utils import HUBDatasetStats
+from yolo.ultralytics.hub.auth import Auth
+from yolo.ultralytics.hub.utils import HUB_API_ROOT, HUB_WEB_ROOT, PREFIX
+from yolo.ultralytics.utils import LOGGER, SETTINGS, USER_CONFIG_DIR, yaml_save
 
 
 def login(api_key=''):

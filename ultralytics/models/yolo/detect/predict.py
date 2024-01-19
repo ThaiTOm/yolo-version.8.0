@@ -2,9 +2,9 @@
 
 import torch
 
-from ultralytics.engine.predictor import BasePredictor
-from ultralytics.engine.results import Results
-from ultralytics.utils import DEFAULT_CFG, ROOT, ops
+from yolo.ultralytics.engine.predictor import BasePredictor
+from yolo.ultralytics.engine.results import Results
+from yolo.ultralytics.utils import DEFAULT_CFG, ROOT, ops
 
 
 class DetectionPredictor(BasePredictor):

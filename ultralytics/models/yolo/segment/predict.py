@@ -2,9 +2,9 @@
 
 import torch
 
-from ultralytics.engine.results import Results
-from ultralytics.models.yolo.detect.predict import DetectionPredictor
-from ultralytics.utils import DEFAULT_CFG, ROOT, ops
+from yolo.ultralytics.engine.results import Results
+from yolo.ultralytics.models.yolo.detect.predict import DetectionPredictor
+from yolo.ultralytics.utils import DEFAULT_CFG, ROOT, ops
 
 
 class SegmentationPredictor(DetectionPredictor):

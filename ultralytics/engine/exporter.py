@@ -60,17 +60,17 @@ from pathlib import Path
 
 import torch
 
-from ultralytics.cfg import get_cfg
-from ultralytics.nn.autobackend import check_class_names
-from ultralytics.nn.modules import C2f, Detect, RTDETRDecoder
-from ultralytics.nn.tasks import DetectionModel, SegmentationModel
-from ultralytics.utils import (ARM64, DEFAULT_CFG, LINUX, LOGGER, MACOS, ROOT, WINDOWS, __version__, callbacks,
+from yolo.ultralytics.cfg import get_cfg
+from yolo.ultralytics.nn.autobackend import check_class_names
+from yolo.ultralytics.nn.modules import C2f, Detect, RTDETRDecoder
+from yolo.ultralytics.nn.tasks import DetectionModel, SegmentationModel
+from yolo.ultralytics.utils import (ARM64, DEFAULT_CFG, LINUX, LOGGER, MACOS, ROOT, WINDOWS, __version__, callbacks,
                                colorstr, get_default_args, yaml_save)
-from ultralytics.utils.checks import check_imgsz, check_requirements, check_version
-from ultralytics.utils.downloads import attempt_download_asset, get_github_assets
-from ultralytics.utils.files import file_size, spaces_in_path
-from ultralytics.utils.ops import Profile
-from ultralytics.utils.torch_utils import get_latest_opset, select_device, smart_inference_mode
+from yolo.ultralytics.utils.checks import check_imgsz, check_requirements, check_version
+from yolo.ultralytics.utils.downloads import attempt_download_asset, get_github_assets
+from yolo.ultralytics.utils.files import file_size, spaces_in_path
+from yolo.ultralytics.utils.ops import Profile
+from yolo.ultralytics.utils.torch_utils import get_latest_opset, select_device, smart_inference_mode
 
 
 def export_formats():
