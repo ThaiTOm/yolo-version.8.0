@@ -47,7 +47,7 @@ class HUBTrainingSession:
             ConnectionError: If connecting with global API key is not supported.
         """
 
-        from ultralytics.hub.auth import Auth
+        from yolo.ultralytics.hub.auth import Auth
 
         # Parse input
         if url.startswith(f'{HUB_WEB_ROOT}/models/'):

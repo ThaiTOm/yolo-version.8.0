@@ -259,7 +259,7 @@ def safe_download(url,
                     if method == 'torch':
                         torch.hub.download_url_to_file(url, f, progress=progress)
                     else:
-                        from ultralytics.utils import TQDM_BAR_FORMAT
+                        from yolo.ultralytics.utils import TQDM_BAR_FORMAT
                         with request.urlopen(url) as response, tqdm(total=int(response.getheader('Content-Length', 0)),
                                                                     desc=desc,
                                                                     disable=not progress,
@@ -311,7 +311,7 @@ def get_github_assets(repo='ultralytics/assets', version='latest', retry=False):
 
 def attempt_download_asset(file, repo='ultralytics/assets', release='v0.0.0'):
     """Attempt file download from GitHub release assets if not found locally. release = 'latest', 'v6.2', etc."""
-    from ultralytics.utils import SETTINGS  # scoped for circular import
+    from yolo.ultralytics.utils import SETTINGS  # scoped for circular import
 
     # YOLOv3/5u updates
     file = str(file)

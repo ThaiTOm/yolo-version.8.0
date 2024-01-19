@@ -628,8 +628,8 @@ class Exporter:
             if self.args.data:
                 import numpy as np
 
-                from ultralytics.data.dataset import YOLODataset
-                from ultralytics.data.utils import check_det_dataset
+                from yolo.ultralytics.data.dataset import YOLODataset
+                from yolo.ultralytics.data.utils import check_det_dataset
 
                 # Generate calibration data for integer quantization
                 LOGGER.info(f"{prefix} collecting INT8 calibration images from 'data={self.args.data}'")
@@ -988,7 +988,7 @@ def export(cfg=DEFAULT_CFG):
     cfg.model = cfg.model or 'yolov8n.yaml'
     cfg.format = cfg.format or 'torchscript'
 
-    from ultralytics import YOLO
+    from yolo.ultralytics import YOLO
     model = YOLO(cfg.model)
     model.export(**vars(cfg))
 

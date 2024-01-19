@@ -349,7 +349,7 @@ class ClassificationModel(BaseModel):
 
     def _from_detection_model(self, model, nc=1000, cutoff=10):
         """Create a YOLOv5 classification model from a YOLOv5 detection model."""
-        from ultralytics.nn.autobackend import AutoBackend
+        from yolo.ultralytics.nn.autobackend import AutoBackend
         if isinstance(model, AutoBackend):
             model = model.model  # unwrap DetectMultiBackend
         model.model = model.model[:cutoff]  # backbone
@@ -412,7 +412,7 @@ class RTDETRDetectionModel(DetectionModel):
 
     def init_criterion(self):
         """Compute the classification loss between predictions and true labels."""
-        from ultralytics.models.utils.loss import RTDETRDetectionLoss
+        from yolo.ultralytics.models.utils.loss import RTDETRDetectionLoss
 
         return RTDETRDetectionLoss(nc=self.nc, use_vfl=True)
 
@@ -551,7 +551,7 @@ def torch_safe_load(weight):
     Returns:
         (dict): The loaded PyTorch model.
     """
-    from ultralytics.utils.downloads import attempt_download_asset
+    from yolo.ultralytics.utils.downloads import attempt_download_asset
 
     check_suffix(file=weight, suffix='.pt')
     file = attempt_download_asset(weight)  # search online if missing locally

@@ -383,7 +383,7 @@ class HUBDatasetStats():
 
     def get_json(self, save=False, verbose=False):
         """Return dataset JSON for Ultralytics HUB."""
-        from ultralytics.data import YOLODataset  # ClassificationDataset
+        from yolo.ultralytics.data import YOLODataset  # ClassificationDataset
 
         def _round(labels):
             """Update labels to integer class and 4 decimal place floats."""
@@ -434,7 +434,7 @@ class HUBDatasetStats():
 
     def process_images(self):
         """Compress images for Ultralytics HUB."""
-        from ultralytics.data import YOLODataset  # ClassificationDataset
+        from yolo.ultralytics.data import YOLODataset  # ClassificationDataset
 
         for split in 'train', 'val', 'test':
             if self.data.get(split) is None:

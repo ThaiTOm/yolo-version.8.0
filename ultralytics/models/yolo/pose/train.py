@@ -70,7 +70,7 @@ def train(cfg=DEFAULT_CFG, use_python=False):
 
     args = dict(model=model, data=data, device=device)
     if use_python:
-        from ultralytics import YOLO
+        from yolo.ultralytics import YOLO
         YOLO(model).train(**args)
     else:
         trainer = PoseTrainer(overrides=args)

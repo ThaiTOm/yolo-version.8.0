@@ -80,7 +80,7 @@ class Model:
 
         # Check if Ultralytics HUB model from https://hub.ultralytics.com
         if self.is_hub_model(model):
-            from ultralytics.hub.session import HUBTrainingSession
+            from yolo.ultralytics.hub.session import HUBTrainingSession
             self.session = HUBTrainingSession(model)
             model = self.session.model_file
 
@@ -260,7 +260,7 @@ class Model:
 
         """
         if not hasattr(self.predictor, 'trackers'):
-            from ultralytics.trackers import register_tracker
+            from yolo.ultralytics.trackers import register_tracker
             register_tracker(self, persist)
         # ByteTrack-based method needs low confidence predictions as input
         conf = kwargs.get('conf') or 0.1
@@ -308,7 +308,7 @@ class Model:
             **kwargs : Any other args accepted by the validators. To see all args check 'configuration' section in docs
         """
         self._check_is_pytorch_model()
-        from ultralytics.utils.benchmarks import benchmark
+        from yolo.ultralytics.utils.benchmarks import benchmark
         overrides = self.model.args.copy()
         overrides.update(kwargs)
         overrides['mode'] = 'benchmark'
@@ -402,7 +402,7 @@ class Model:
             ModuleNotFoundError: If Ray Tune is not installed.
         """
         self._check_is_pytorch_model()
-        from ultralytics.utils.tuner import run_ray_tune
+        from yolo.ultralytics.utils.tuner import run_ray_tune
         return run_ray_tune(self, *args, **kwargs)
 
     @property
