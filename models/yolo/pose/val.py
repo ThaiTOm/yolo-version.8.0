@@ -5,11 +5,11 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from yolo.ultralytics.models.yolo.detect import DetectionValidator
-from yolo.ultralytics.utils import DEFAULT_CFG, LOGGER, ops
-from yolo.ultralytics.utils.checks import check_requirements
-from yolo.ultralytics.utils.metrics import OKS_SIGMA, PoseMetrics, box_iou, kpt_iou
-from yolo.ultralytics.utils.plotting import output_to_target, plot_images
+from ultralytics.models.yolo.detect import DetectionValidator
+from ultralytics.utils import DEFAULT_CFG, LOGGER, ops
+from ultralytics.utils.checks import check_requirements
+from ultralytics.utils.metrics import OKS_SIGMA, PoseMetrics, box_iou, kpt_iou
+from ultralytics.utils.plotting import output_to_target, plot_images
 
 
 class PoseValidator(DetectionValidator):
@@ -203,7 +203,7 @@ def val(cfg=DEFAULT_CFG, use_python=False):
 
     args = dict(model=model, data=data)
     if use_python:
-        from yolo.ultralytics import YOLO
+        from ultralytics import YOLO
         YOLO(model).val(**args)
     else:
         validator = PoseValidator(args=args)

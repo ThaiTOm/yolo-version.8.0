@@ -2,10 +2,10 @@
 
 import torch
 
-from yolo.ultralytics.data.augment import LetterBox
-from yolo.ultralytics.engine.predictor import BasePredictor
-from yolo.ultralytics.engine.results import Results
-from yolo.ultralytics.utils import ops
+from ultralytics.data.augment import LetterBox
+from ultralytics.engine.predictor import BasePredictor
+from ultralytics.engine.results import Results
+from ultralytics.utils import ops
 
 
 class RTDETRPredictor(BasePredictor):

@@ -5,15 +5,15 @@ import sys
 from pathlib import Path
 from typing import Union
 
-from yolo.ultralytics.cfg import get_cfg
-from yolo.ultralytics.engine.exporter import Exporter
-from yolo.ultralytics.hub.utils import HUB_WEB_ROOT
-from yolo.ultralytics.nn.tasks import attempt_load_one_weight, guess_model_task, nn, yaml_model_load
-from yolo.ultralytics.utils import (DEFAULT_CFG, DEFAULT_CFG_DICT, DEFAULT_CFG_KEYS, LOGGER, RANK, ROOT, callbacks,
+from ultralytics.cfg import get_cfg
+from ultralytics.engine.exporter import Exporter
+from ultralytics.hub.utils import HUB_WEB_ROOT
+from ultralytics.nn.tasks import attempt_load_one_weight, guess_model_task, nn, yaml_model_load
+from ultralytics.utils import (DEFAULT_CFG, DEFAULT_CFG_DICT, DEFAULT_CFG_KEYS, LOGGER, RANK, ROOT, callbacks,
                                is_git_dir, yaml_load)
-from yolo.ultralytics.utils.checks import check_file, check_imgsz, check_pip_update_available, check_yaml
-from yolo.ultralytics.utils.downloads import GITHUB_ASSET_STEMS
-from yolo.ultralytics.utils.torch_utils import smart_inference_mode
+from ultralytics.utils.checks import check_file, check_imgsz, check_pip_update_available, check_yaml
+from ultralytics.utils.downloads import GITHUB_ASSET_STEMS
+from ultralytics.utils.torch_utils import smart_inference_mode
 
 
 class Model:
@@ -80,7 +80,7 @@ class Model:
 
         # Check if Ultralytics HUB model from https://hub.ultralytics.com
         if self.is_hub_model(model):
-            from yolo.ultralytics.hub.session import HUBTrainingSession
+            from ultralytics.hub.session import HUBTrainingSession
             self.session = HUBTrainingSession(model)
             model = self.session.model_file
 
@@ -260,7 +260,7 @@ class Model:
 
         """
         if not hasattr(self.predictor, 'trackers'):
-            from yolo.ultralytics.trackers import register_tracker
+            from ultralytics.trackers import register_tracker
             register_tracker(self, persist)
         # ByteTrack-based method needs low confidence predictions as input
         conf = kwargs.get('conf') or 0.1
@@ -308,7 +308,7 @@ class Model:
             **kwargs : Any other args accepted by the validators. To see all args check 'configuration' section in docs
         """
         self._check_is_pytorch_model()
-        from yolo.ultralytics.utils.benchmarks import benchmark
+        from ultralytics.utils.benchmarks import benchmark
         overrides = self.model.args.copy()
         overrides.update(kwargs)
         overrides['mode'] = 'benchmark'
@@ -402,7 +402,7 @@ class Model:
             ModuleNotFoundError: If Ray Tune is not installed.
         """
         self._check_is_pytorch_model()
-        from yolo.ultralytics.utils.tuner import run_ray_tune
+        from ultralytics.utils.tuner import run_ray_tune
         return run_ray_tune(self, *args, **kwargs)
 
     @property

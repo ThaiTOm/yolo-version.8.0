@@ -26,14 +26,14 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-from yolo.ultralytics.cfg import get_cfg
-from yolo.ultralytics.data.utils import check_cls_dataset, check_det_dataset
-from yolo.ultralytics.nn.autobackend import AutoBackend
-from yolo.ultralytics.utils import DEFAULT_CFG, LOGGER, RANK, SETTINGS, TQDM_BAR_FORMAT, callbacks, colorstr, emojis
-from yolo.ultralytics.utils.checks import check_imgsz
-from yolo.ultralytics.utils.files import increment_path
-from yolo.ultralytics.utils.ops import Profile
-from yolo.ultralytics.utils.torch_utils import de_parallel, select_device, smart_inference_mode
+from ultralytics.cfg import get_cfg
+from ultralytics.data.utils import check_cls_dataset, check_det_dataset
+from ultralytics.nn.autobackend import AutoBackend
+from ultralytics.utils import DEFAULT_CFG, LOGGER, RANK, SETTINGS, TQDM_BAR_FORMAT, callbacks, colorstr, emojis
+from ultralytics.utils.checks import check_imgsz
+from ultralytics.utils.files import increment_path
+from ultralytics.utils.ops import Profile
+from ultralytics.utils.torch_utils import de_parallel, select_device, smart_inference_mode
 
 
 class BaseValidator:

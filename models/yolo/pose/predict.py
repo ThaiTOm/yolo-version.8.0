@@ -1,8 +1,8 @@
 # Ultralytics YOLO 🚀, AGPL-3.0 license
 
-from yolo.ultralytics.engine.results import Results
-from yolo.ultralytics.models.yolo.detect.predict import DetectionPredictor
-from yolo.ultralytics.utils import DEFAULT_CFG, LOGGER, ROOT, ops
+from ultralytics.engine.results import Results
+from ultralytics.models.yolo.detect.predict import DetectionPredictor
+from ultralytics.utils import DEFAULT_CFG, LOGGER, ROOT, ops
 
 
 class PosePredictor(DetectionPredictor):
@@ -50,7 +50,7 @@ def predict(cfg=DEFAULT_CFG, use_python=False):
 
     args = dict(model=model, source=source)
     if use_python:
-        from yolo.ultralytics import YOLO
+        from ultralytics import YOLO
         YOLO(model)(**args)
     else:
         predictor = PosePredictor(overrides=args)

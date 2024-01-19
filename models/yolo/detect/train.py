@@ -4,13 +4,13 @@ from copy import copy
 
 import numpy as np
 
-from yolo.ultralytics.data import build_dataloader, build_yolo_dataset
-from yolo.ultralytics.engine.trainer import BaseTrainer
-from yolo.ultralytics.models import yolo
-from yolo.ultralytics.nn.tasks import DetectionModel
-from yolo.ultralytics.utils import DEFAULT_CFG, LOGGER, RANK
-from yolo.ultralytics.utils.plotting import plot_images, plot_labels, plot_results
-from yolo.ultralytics.utils.torch_utils import de_parallel, torch_distributed_zero_first
+from ultralytics.data import build_dataloader, build_yolo_dataset
+from ultralytics.engine.trainer import BaseTrainer
+from ultralytics.models import yolo
+from ultralytics.nn.tasks import DetectionModel
+from ultralytics.utils import DEFAULT_CFG, LOGGER, RANK
+from ultralytics.utils.plotting import plot_images, plot_labels, plot_results
+from ultralytics.utils.torch_utils import de_parallel, torch_distributed_zero_first
 
 
 # BaseTrainer python usage
@@ -113,7 +113,7 @@ def train(cfg=DEFAULT_CFG, use_python=False):
 
     args = dict(model=model, data=data, device=device)
     if use_python:
-        from yolo.ultralytics import YOLO
+        from ultralytics import YOLO
         YOLO(model).train(**args)
     else:
         trainer = DetectionTrainer(overrides=args)

@@ -6,10 +6,10 @@ import cv2
 import numpy as np
 import torch
 
-from yolo.ultralytics.data import YOLODataset
-from yolo.ultralytics.data.augment import Compose, Format, v8_transforms
-from yolo.ultralytics.models.yolo.detect import DetectionValidator
-from yolo.ultralytics.utils import colorstr, ops
+from ultralytics.data import YOLODataset
+from ultralytics.data.augment import Compose, Format, v8_transforms
+from ultralytics.models.yolo.detect import DetectionValidator
+from ultralytics.utils import colorstr, ops
 
 __all__ = 'RTDETRValidator',  # tuple or list
 

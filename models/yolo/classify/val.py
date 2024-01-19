@@ -2,11 +2,11 @@
 
 import torch
 
-from yolo.ultralytics.data import ClassificationDataset, build_dataloader
-from yolo.ultralytics.engine.validator import BaseValidator
-from yolo.ultralytics.utils import DEFAULT_CFG, LOGGER
-from yolo.ultralytics.utils.metrics import ClassifyMetrics, ConfusionMatrix
-from yolo.ultralytics.utils.plotting import plot_images
+from ultralytics.data import ClassificationDataset, build_dataloader
+from ultralytics.engine.validator import BaseValidator
+from ultralytics.utils import DEFAULT_CFG, LOGGER
+from ultralytics.utils.metrics import ClassifyMetrics, ConfusionMatrix
+from ultralytics.utils.plotting import plot_images
 
 
 class ClassificationValidator(BaseValidator):
@@ -99,7 +99,7 @@ def val(cfg=DEFAULT_CFG, use_python=False):
 
     args = dict(model=model, data=data)
     if use_python:
-        from yolo.ultralytics import YOLO
+        from ultralytics import YOLO
         YOLO(model).val(**args)
     else:
         validator = ClassificationValidator(args=args)

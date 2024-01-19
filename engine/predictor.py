@@ -34,15 +34,14 @@ import cv2
 import numpy as np
 import torch
 
-from yolo.ultralytics.cfg import get_cfg
-from yolo.ultralytics.data import load_inference_source
-from yolo.ultralytics.data.augment import LetterBox, classify_transforms
-from yolo.ultralytics.nn.autobackend import AutoBackend
-from yolo.ultralytics.utils import DEFAULT_CFG, LOGGER, MACOS, SETTINGS, WINDOWS, callbacks, colorstr, ops
-from yolo.ultralytics.utils.checks import check_imgsz, check_imshow
-from yolo.ultralytics.utils.files import increment_path
-from yolo.ultralytics.utils.torch_utils import select_device, smart_inference_mode
-
+from ultralytics.cfg import get_cfg
+from ultralytics.data import load_inference_source
+from ultralytics.data.augment import LetterBox, classify_transforms
+from ultralytics.nn.autobackend import AutoBackend
+from ultralytics.utils import DEFAULT_CFG, LOGGER, MACOS, SETTINGS, WINDOWS, callbacks, colorstr, ops
+from ultralytics.utils.checks import check_imgsz, check_imshow
+from ultralytics.utils.files import increment_path
+from ultralytics.utils.torch_utils import select_device, smart_inference_mode
 
 STREAM_WARNING = """
     WARNING ⚠️ stream/video/webcam/dir predict source will accumulate results in RAM unless `stream=True` is passed,

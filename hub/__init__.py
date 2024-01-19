@@ -2,10 +2,10 @@
 
 import requests
 
-from yolo.ultralytics.data.utils import HUBDatasetStats
-from yolo.ultralytics.hub.auth import Auth
-from yolo.ultralytics.hub.utils import HUB_API_ROOT, HUB_WEB_ROOT, PREFIX
-from yolo.ultralytics.utils import LOGGER, SETTINGS, USER_CONFIG_DIR, yaml_save
+from ultralytics.data.utils import HUBDatasetStats
+from ultralytics.hub.auth import Auth
+from ultralytics.hub.utils import HUB_API_ROOT, HUB_WEB_ROOT, PREFIX
+from ultralytics.utils import LOGGER, SETTINGS, USER_CONFIG_DIR, yaml_save
 
 
 def login(api_key=''):
@@ -71,7 +71,7 @@ def reset_model(model_id=''):
 
 def export_fmts_hub():
     """Returns a list of HUB-supported export formats."""
-    from yolo.ultralytics.engine.exporter import export_formats
+    from ultralytics.engine.exporter import export_formats
     return list(export_formats()['Argument'][1:]) + ['ultralytics_tflite', 'ultralytics_coreml']
 
 

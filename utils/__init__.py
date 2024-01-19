@@ -21,7 +21,7 @@ import numpy as np
 import torch
 import yaml
 
-from yolo.ultralytics import __version__
+from ultralytics import __version__
 
 # PyTorch Multi-GPU DDP Constants
 RANK = int(os.getenv('RANK', -1))
@@ -756,8 +756,8 @@ class SettingsManager(dict):
         import copy
         import hashlib
 
-        from yolo.ultralytics.utils.checks import check_version
-        from yolo.ultralytics.utils.torch_utils import torch_distributed_zero_first
+        from ultralytics.utils.checks import check_version
+        from ultralytics.utils.torch_utils import torch_distributed_zero_first
 
         git_dir = get_git_dir()
         root = git_dir or Path()

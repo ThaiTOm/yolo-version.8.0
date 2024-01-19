@@ -8,8 +8,8 @@ import cv2
 import numpy as np
 from tqdm import tqdm
 
-from yolo.ultralytics.utils.checks import check_requirements
-from yolo.ultralytics.utils.files import make_dirs
+from ultralytics.utils.checks import check_requirements
+from ultralytics.utils.files import make_dirs
 
 
 def coco91_to_coco80_class():

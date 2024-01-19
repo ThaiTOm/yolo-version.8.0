@@ -2,9 +2,9 @@
 
 import torch
 
-from yolo.ultralytics.engine.predictor import BasePredictor
-from yolo.ultralytics.engine.results import Results
-from yolo.ultralytics.utils import DEFAULT_CFG, ROOT
+from ultralytics.engine.predictor import BasePredictor
+from ultralytics.engine.results import Results
+from ultralytics.utils import DEFAULT_CFG, ROOT
 
 
 class ClassificationPredictor(BasePredictor):
@@ -40,7 +40,7 @@ def predict(cfg=DEFAULT_CFG, use_python=False):
 
     args = dict(model=model, source=source)
     if use_python:
-        from yolo.ultralytics import YOLO
+        from ultralytics import YOLO
         YOLO(model)(**args)
     else:
         predictor = ClassificationPredictor(overrides=args)

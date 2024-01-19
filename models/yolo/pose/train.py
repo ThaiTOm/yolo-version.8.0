@@ -2,10 +2,10 @@
 
 from copy import copy
 
-from yolo.ultralytics.models import yolo
-from yolo.ultralytics.nn.tasks import PoseModel
-from yolo.ultralytics.utils import DEFAULT_CFG, LOGGER
-from yolo.ultralytics.utils.plotting import plot_images, plot_results
+from ultralytics.models import yolo
+from ultralytics.nn.tasks import PoseModel
+from ultralytics.utils import DEFAULT_CFG, LOGGER
+from ultralytics.utils.plotting import plot_images, plot_results
 
 
 # BaseTrainer python usage
@@ -70,7 +70,7 @@ def train(cfg=DEFAULT_CFG, use_python=False):
 
     args = dict(model=model, data=data, device=device)
     if use_python:
-        from yolo.ultralytics import YOLO
+        from ultralytics import YOLO
         YOLO(model).train(**args)
     else:
         trainer = PoseTrainer(overrides=args)
